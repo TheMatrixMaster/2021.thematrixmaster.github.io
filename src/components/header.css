@@ -1,0 +1,23 @@
+.header-bar {
+  background: transparent;
+  margin-bottom: 1.45rem;
+}
+
+.header-bar > div {
+  margin: 0 auto;
+  padding: 1.45rem 1.0875rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.header-bar > div > a {
+  color: #fff;
+  margin-left: 1.5rem;
+  text-decoration: none;
+}
+
+.header-bar > div > a:hover {
+  color: rgb(217, 217, 217);
+  text-decoration: underline;
+}

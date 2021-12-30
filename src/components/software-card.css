@@ -1,0 +1,35 @@
+.card {
+  padding: 1.5em;
+  height: 350px;
+  margin-right: 40px;
+  width: calc(100% / 3.5);
+
+  color: inherit;
+  text-decoration: none;
+}
+
+.card:hover {
+  border-radius: 2px;
+  background: #d6d3cb;
+  text-decoration: none;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.25));
+}
+
+.card > .icon {
+  margin-bottom: 0.5rem;
+  min-height: 40px;
+}
+.card > .small {
+  font-size: 0.85rem;
+  margin: 0;
+}
+.card > p {
+  margin: 0.25rem 0;
+}
+
+.card > .url {
+  display: block;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
