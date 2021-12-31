@@ -6,7 +6,10 @@ import SoftwareCard from '../components/software-card';
 const SoftwarePage = (props) => {
   const { allMdx } = useStaticQuery(graphql`
     {
-      allMdx(filter: { slug: { regex: "/^(mdx/software)/" } }) {
+      allMdx(
+        filter: {slug: {regex: "/^(mdx/software)/"}}
+        sort: {fields: frontmatter___year, order: DESC}
+      ) {
         edges {
           node {
             body

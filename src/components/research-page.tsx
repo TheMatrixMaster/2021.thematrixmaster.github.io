@@ -5,7 +5,10 @@ import ResearchEntry from './research-entry';
 const ResearchPage = (props) => {
   const data = useStaticQuery(graphql`
     {
-      allMdx(filter: { slug: { regex: "/^(mdx/research)/" } }) {
+      allMdx(
+        filter: {slug: {regex: "/^(mdx/research)/"}}
+        sort: {fields: frontmatter___sort_order, order: ASC}
+      ) {
         edges {
           node {
             body
