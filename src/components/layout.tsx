@@ -8,16 +8,14 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import './layout.css';
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 
 const Layout = ({ children }) => {
   return (
     <>
       <div style={{ margin: `0 auto` }}>
         <main>{children}</main>
-        <footer
-          style={{ margin: `3rem 0 .5rem 0.5rem` }}
-        >
+        <footer style={{ margin: `3rem 0 .5rem 0.5rem` }}>
           <Link to="/">@me</Link> - {new Date().getFullYear()}
         </footer>
       </div>

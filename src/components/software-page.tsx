@@ -3,12 +3,12 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import SoftwareCard from '../components/software-card';
 
-const SoftwarePage = (props) => {
+const SoftwarePage = props => {
   const { allMdx } = useStaticQuery(graphql`
     {
       allMdx(
-        filter: {slug: {regex: "/^(mdx/software)/"}}
-        sort: {fields: frontmatter___year, order: DESC}
+        filter: { slug: { regex: "/^(mdx/software)/" } }
+        sort: { fields: frontmatter___year, order: DESC }
       ) {
         edges {
           node {

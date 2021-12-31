@@ -1,6 +1,6 @@
 {
   "name": "szl-portfolio",
-  "private": true,
+  "private": false,
   "description": "Stephen Lu's personal website & portfolio",
   "version": "0.1.0",
   "author": "Stephen Lu <stephen.zwn.lu@gmail.com>",

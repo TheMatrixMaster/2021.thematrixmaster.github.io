@@ -24,7 +24,7 @@ const SocialLinks = () => {
       {allSocialJson.edges.map(e => {
         const { name, icon, url, id } = e.node;
         return (
-          <a key={id} href={url} target={"_blank"}>
+          <a key={id} href={url} target={'_blank'}>
             <img src={icon.publicURL} alt={name} />
           </a>
         );

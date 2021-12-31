@@ -1,8 +1,8 @@
-import { graphql, useStaticQuery } from "gatsby";
-import CareerEntry from "./career-entry";
-import * as React from "react";
+import { graphql, useStaticQuery } from 'gatsby';
+import CareerEntry from './career-entry';
+import * as React from 'react';
 
-const CareerPage = (props) => {
+const CareerPage = props => {
   const { allAwardsJson, allCareerJson, allEduJson } = useStaticQuery(graphql`
     {
       allAwardsJson {
@@ -77,7 +77,9 @@ const CareerPage = (props) => {
           const { id, title, year } = edge.node;
           return (
             <div key={id}>
-              <p>{title} '{year}</p>
+              <p>
+                {title} '{year}
+              </p>
             </div>
           );
         })}

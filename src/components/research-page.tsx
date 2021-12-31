@@ -2,12 +2,12 @@ import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import ResearchEntry from './research-entry';
 
-const ResearchPage = (props) => {
+const ResearchPage = props => {
   const data = useStaticQuery(graphql`
     {
       allMdx(
-        filter: {slug: {regex: "/^(mdx/research)/"}}
-        sort: {fields: frontmatter___sort_order, order: ASC}
+        filter: { slug: { regex: "/^(mdx/research)/" } }
+        sort: { fields: frontmatter___sort_order, order: ASC }
       ) {
         edges {
           node {

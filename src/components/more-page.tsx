@@ -1,8 +1,8 @@
-import { graphql, useStaticQuery } from "gatsby";
-import { MDXRenderer } from "gatsby-plugin-mdx";
-import * as React from "react";
+import { graphql, useStaticQuery } from 'gatsby';
+import { MDXRenderer } from 'gatsby-plugin-mdx';
+import * as React from 'react';
 
-const MorePage = (props) => {
+const MorePage = props => {
   const { mdx } = useStaticQuery(graphql`
     {
       mdx(slug: { eq: "mdx/aboutthissite" }) {
@@ -21,6 +21,6 @@ const MorePage = (props) => {
       <MDXRenderer>{mdx.body}</MDXRenderer>
     </section>
   );
-}
+};
 
 export default MorePage;

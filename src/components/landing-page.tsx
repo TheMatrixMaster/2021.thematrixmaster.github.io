@@ -29,7 +29,9 @@ const LandingPage = ({ id }: { id: string }) => {
         <Header />
         <div className={'text-container'}>
           <h3>Hey there!</h3>
-          <h1>How's it <br/> going?</h1>
+          <h1>
+            How's it <br /> going?
+          </h1>
           <h3>I'm Stephen.</h3>
 
           <div className={'roles'}>
