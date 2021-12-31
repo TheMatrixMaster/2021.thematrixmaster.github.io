@@ -41,7 +41,7 @@ const CareerPage = (props) => {
 
   return (
     <section {...props}>
-      <section style={{ gridColumn: '1/4' }}>
+      <section>
         <h1>Career</h1>
         {allCareerJson.edges.map(edge => {
           const { id, title, description, start_time, end_time } = edge.node;
@@ -56,7 +56,7 @@ const CareerPage = (props) => {
           );
         })}
       </section>
-      <section className={'career-col'} style={{ gridColumn: '4/9' }}>
+      <section>
         <h1>Education</h1>
         {allEduJson.edges.map(edge => {
           const { id, title, description, start_time, end_time } = edge.node;
@@ -71,7 +71,7 @@ const CareerPage = (props) => {
           );
         })}
       </section>
-      <section className={'awards-col'} style={{ gridColumn: '10/13' }}>
+      <section>
         <h1>Awards</h1>
         {allAwardsJson.edges.map(edge => {
           const { id, title, year } = edge.node;

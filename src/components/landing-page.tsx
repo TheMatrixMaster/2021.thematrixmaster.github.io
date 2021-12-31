@@ -2,7 +2,6 @@ import * as React from 'react';
 
 import Header from './header';
 import SocialLinks from './social';
-import './landing-page.css';
 
 import { graphql, useStaticQuery } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';

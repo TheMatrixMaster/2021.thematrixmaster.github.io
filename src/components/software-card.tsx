@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './software-card.css';
 
 import { MDXRenderer } from 'gatsby-plugin-mdx';
 import { GatsbyImage, getImage, IGatsbyImageData } from 'gatsby-plugin-image';
@@ -24,7 +23,6 @@ const SoftwareCard = ({ id, frontmatter, body }: SoftwareCardProps) => {
           image={image}
           className={'icon'}
           alt={frontmatter.title}
-          imgStyle={{ borderRadius: '50%' }}
         />
       ) : (
         <div className={'icon'} />
