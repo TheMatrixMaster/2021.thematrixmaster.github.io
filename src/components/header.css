@@ -1,19 +1,22 @@
 .header-bar {
   background: transparent;
-  margin-bottom: 1.45rem;
 }
 
 .header-bar > div {
   margin: 0 auto;
-  padding: 1.45rem 1.0875rem;
+  padding: 1.8rem 0;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
+.header-bar .gatsby-image-wrapper {
+  margin-right: 1.25rem;
+}
+
 .header-bar > div > a {
   color: #fff;
-  margin-left: 1.5rem;
+  margin-right: 1.5rem;
   text-decoration: none;
 }
 

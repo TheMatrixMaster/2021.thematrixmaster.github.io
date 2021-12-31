@@ -15,7 +15,7 @@ type ResearchEntryProps = {
 };
 
 const ResearchEntry = ({ id, frontmatter, body }: ResearchEntryProps) => (
-  <div key={id}>
+  <div key={id} className={'research-entry'}>
     <h3>
       {frontmatter.lab_url ? (
         <a href={frontmatter.lab_url}>{frontmatter.title}</a>

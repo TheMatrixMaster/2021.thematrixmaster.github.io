@@ -3,7 +3,7 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import SoftwareCard from '../components/software-card';
 
-const SoftwarePage = ({ id }: { id: string }) => {
+const SoftwarePage = (props) => {
   const { allMdx } = useStaticQuery(graphql`
     {
       allMdx(filter: { slug: { regex: "/^(mdx/software)/" } }) {
@@ -28,15 +28,9 @@ const SoftwarePage = ({ id }: { id: string }) => {
   `);
 
   return (
-    <section id={id} style={{ height: '100vh' }}>
+    <section {...props}>
       <h1>Software</h1>
-      <div
-        style={{
-          display: 'flex',
-          flexWrap: 'wrap',
-          flexDirection: 'row',
-        }}
-      >
+      <div className={'flex-container'}>
         {allMdx.edges.map(edge => {
           const { id, frontmatter, body } = edge.node;
           return (

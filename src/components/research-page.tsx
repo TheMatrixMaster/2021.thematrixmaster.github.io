@@ -2,7 +2,7 @@ import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import ResearchEntry from './research-entry';
 
-const ResearchPage = ({ id }: { id: string }) => {
+const ResearchPage = (props) => {
   const data = useStaticQuery(graphql`
     {
       allMdx(filter: { slug: { regex: "/^(mdx/research)/" } }) {
@@ -24,7 +24,7 @@ const ResearchPage = ({ id }: { id: string }) => {
   `);
 
   return (
-    <section id={id} style={{ height: '100vh' }}>
+    <section {...props}>
       <h1>Research</h1>
       {data.allMdx.edges.map(edge => {
         const { id, body, frontmatter } = edge.node;

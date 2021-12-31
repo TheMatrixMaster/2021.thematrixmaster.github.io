@@ -18,7 +18,7 @@ type SoftwareCardProps = {
 const SoftwareCard = ({ id, frontmatter, body }: SoftwareCardProps) => {
   const image = getImage(frontmatter.icon);
   return (
-    <a key={id} className={'card'} href={frontmatter.url}>
+    <a key={id} className={'card'} href={frontmatter.url} target={"_blank"}>
       {image ? (
         <GatsbyImage
           image={image}

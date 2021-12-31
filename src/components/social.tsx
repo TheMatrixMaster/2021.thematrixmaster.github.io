@@ -2,14 +2,17 @@ import * as React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 
 const SocialLinks = () => {
-  const data = useStaticQuery(graphql`
+  const { allSocialJson } = useStaticQuery(graphql`
     {
-      allFile(filter: { relativeDirectory: { eq: "icons/social" } }) {
+      allSocialJson {
         edges {
           node {
             id
             name
-            publicURL
+            url
+            icon {
+              publicURL
+            }
           }
         }
       }
@@ -17,10 +20,14 @@ const SocialLinks = () => {
   `);
 
   return (
-    <div>
-      {data.allFile.edges.map(e => {
-        const { name, publicURL, id } = e.node;
-        return <img key={id} src={publicURL} alt={name} />;
+    <div className={'link-container'}>
+      {allSocialJson.edges.map(e => {
+        const { name, icon, url, id } = e.node;
+        return (
+          <a key={id} href={url} target={"_blank"}>
+            <img src={icon.publicURL} alt={name} />
+          </a>
+        );
       })}
     </div>
   );

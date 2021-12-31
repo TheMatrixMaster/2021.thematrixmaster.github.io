@@ -13,10 +13,10 @@ const CareerEntry = ({
   start_time,
   end_time,
 }: CareerEntryProps) => (
-  <div>
+  <div className={'career-entry'}>
     <h2>{title}</h2>
     <p>{description}</p>
-    <p>
+    <p className={'date'}>
       {start_time} - {end_time}
     </p>
   </div>

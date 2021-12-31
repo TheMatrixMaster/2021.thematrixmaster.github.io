@@ -2,7 +2,7 @@ import { graphql, useStaticQuery } from "gatsby";
 import CareerEntry from "./career-entry";
 import * as React from "react";
 
-const CareerPage = ({ id }: { id: string }) => {
+const CareerPage = (props) => {
   const { allAwardsJson, allCareerJson, allEduJson } = useStaticQuery(graphql`
     {
       allAwardsJson {
@@ -40,14 +40,7 @@ const CareerPage = ({ id }: { id: string }) => {
   `);
 
   return (
-    <section
-      id={id}
-      style={{
-        height: '100vh',
-        display: 'grid',
-        gridTemplateColumns: 'repeat(12, 1fr)',
-      }}
-    >
+    <section {...props}>
       <section style={{ gridColumn: '1/4' }}>
         <h1>Career</h1>
         {allCareerJson.edges.map(edge => {
@@ -63,7 +56,7 @@ const CareerPage = ({ id }: { id: string }) => {
           );
         })}
       </section>
-      <section style={{ gridColumn: '5/8' }}>
+      <section className={'career-col'} style={{ gridColumn: '4/9' }}>
         <h1>Education</h1>
         {allEduJson.edges.map(edge => {
           const { id, title, description, start_time, end_time } = edge.node;
@@ -78,13 +71,13 @@ const CareerPage = ({ id }: { id: string }) => {
           );
         })}
       </section>
-      <section style={{ gridColumn: '9/12' }}>
+      <section className={'awards-col'} style={{ gridColumn: '10/13' }}>
         <h1>Awards</h1>
         {allAwardsJson.edges.map(edge => {
           const { id, title, year } = edge.node;
           return (
             <div key={id}>
-        <p>{title} '{year}</p>
+              <p>{title} '{year}</p>
             </div>
           );
         })}

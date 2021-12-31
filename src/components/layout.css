@@ -7,7 +7,7 @@ html {
   overflow-y: scroll;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  font: 112.5%/1.5em 'Merriweather', serif;
+  font: 125%/1.6em 'Merriweather', serif;
   background-color: var(--color-bg-light);
   scroll-behavior: smooth;
 }
@@ -33,12 +33,12 @@ p {
 /* fonts */
 h1 {
   padding: 0;
-  margin: 0 0 2.5rem 0;
+  margin: 0 0 1.4rem 0;
   color: inherit;
   font-weight: bold;
   font-family: 'Lato', sans-serif;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  font-size: 2.4rem;
   line-height: 1.1;
 }
 h2 {
@@ -48,7 +48,7 @@ h2 {
   font-weight: bold;
   font-family: 'Lato', sans-serif;
   text-rendering: optimizeLegibility;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   line-height: 1.1;
 }
 h3 {
@@ -58,24 +58,7 @@ h3 {
   font-weight: bold;
   font-family: 'Merriweather', serif;
   text-rendering: optimizeLegibility;
-  font-size: 1.1rem;
-  line-height: 1.1;
-}
-h4 {
-  margin-left: 0;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
-  text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.1;
 }
 h5 {
@@ -85,7 +68,7 @@ h5 {
   font-weight: normal;
   font-family: 'Merriweather', serif;
   text-rendering: optimizeLegibility;
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.05;
 }
 
@@ -100,6 +83,59 @@ a:hover {
   outline-width: 0;
   text-decoration: underline;
 }
+
+.page {
+  width: 100%;
+  padding: 2rem calc(55px + 2.5rem);
+}
+.page .flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+.page .research-entry > h5 {
+  font-size: .95rem;
+  font-weight: bold;
+  font-style: italic;
+  margin: .4rem 0;
+}
+.page .research-entry > p {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.page .career-col { padding: 0 10% }
+.page .career-entry { margin-bottom: 1.8rem }
+.page .career-entry > h2 { font-size: 1.6rem }
+.page .career-entry > p { margin: .4rem 0 }
+.page .career-entry .date {
+  font-weight: lighter;
+  font-style: italic;
+  font-size: .95rem;
+  margin-top: .6rem;
+}
+.page .awards-col p {
+  line-height: 1.3;
+  margin-bottom: 1.2rem;
+}
+
+li {
+  margin-bottom: .2rem;
+}
+ol {
+  padding: 0;
+  margin: .6rem 0 1.45rem 1.45rem;
+  list-style-position: outside;
+  list-style-image: none;
+}
+
+
 
 article,
 aside,
@@ -329,18 +365,6 @@ ul {
   list-style-position: outside;
   list-style-image: none;
 }
-ol {
-  margin-left: 1.45rem;
-  margin-right: 0;
-  margin-top: 0;
-  padding-bottom: 0;
-  padding-left: 0;
-  padding-right: 0;
-  padding-top: 0;
-  margin-bottom: 1.45rem;
-  list-style-position: outside;
-  list-style-image: none;
-}
 dl {
   margin-left: 0;
   margin-right: 0;
@@ -449,9 +473,6 @@ dt {
 }
 th {
   font-weight: bold;
-}
-li {
-  margin-bottom: calc(1.45rem / 2);
 }
 ol li {
   padding-left: 0;

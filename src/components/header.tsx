@@ -9,7 +9,7 @@ const Header = () => (
     <div>
       <StaticImage
         alt={'logo'}
-        height={50}
+        height={55}
         aspectRatio={1}
         src={'../static/images/sl-icon.png'}
       />

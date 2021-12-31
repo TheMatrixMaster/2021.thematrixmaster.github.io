@@ -1,0 +1,22 @@
+[
+  {
+    "name": "github",
+    "icon": "../icons/github.svg",
+    "url": "https://github.com/TheMatrixMaster"
+  },
+  {
+    "name": "linkedin",
+    "icon": "../icons/linkedin.svg",
+    "url": "https://www.linkedin.com/in/stephen-lu-02/"
+  },
+  {
+    "name": "instagram",
+    "icon": "../icons/instagram.svg",
+    "url": "https://www.instagram.com/stephen.z.lu/"
+  },
+  {
+    "name": "email",
+    "icon": "../icons/email.svg",
+    "url": "mailto:stephen.zwn.lu@gmail.com"
+  }
+]

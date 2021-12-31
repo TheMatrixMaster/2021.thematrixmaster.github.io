@@ -8,26 +8,18 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
 import './layout.css';
+import { Link } from "gatsby";
 
 const Layout = ({ children }) => {
   return (
     <>
-      {/*<Header />*/}
-      <div
-        style={{
-          margin: `0 auto`,
-          // maxWidth: 1200,
-          // padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <div style={{ margin: `0 auto` }}>
         <main>{children}</main>
-        {/*<footer*/}
-        {/*  style={{ marginTop: `2rem` }}*/}
-        {/*>*/}
-        {/*  © {new Date().getFullYear()}, Built with*/}
-        {/*  {` `}*/}
-        {/*  <a href="https://www.gatsbyjs.com">Gatsby</a>*/}
-        {/*</footer>*/}
+        <footer
+          style={{ margin: `3rem 0 .5rem 0.5rem` }}
+        >
+          <Link to="/">@me</Link> - {new Date().getFullYear()}
+        </footer>
       </div>
     </>
   );

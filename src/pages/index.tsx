@@ -13,10 +13,10 @@ const IndexPage = () => (
   <Layout>
     <Seo title="Home" />
     <LandingPage id={'home'} />
-    <SoftwarePage id={'software'} />
-    <ResearchPage id={'research'} />
-    <CareerPage id={'career'} />
-    <MorePage id={'more'} />
+    <SoftwarePage id={'software'} className={'page'} />
+    <ResearchPage id={'research'} className={'page'} />
+    <CareerPage id={'career'} className={'page grid-container'} />
+    <MorePage id={'more'} className={'page'} />
   </Layout>
 );
 
