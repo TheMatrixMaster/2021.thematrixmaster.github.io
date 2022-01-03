@@ -259,6 +259,7 @@ ol {
   font-size: 0.85rem;
 }
 .right-panel .text-container .avatar {
+  z-index: 1;
   width: 3.5rem;
   aspect-ratio: 1;
   border-width: 2px;
@@ -287,9 +288,10 @@ ol {
 
 .card > .icon {
   margin-bottom: 0.5rem;
-  height: 2.2rem;
   width: 2.2rem;
+  height: 2.2rem;
   border-radius: 50%;
+  z-index: 1;
 }
 .card > .small {
   font-size: 0.85rem;
