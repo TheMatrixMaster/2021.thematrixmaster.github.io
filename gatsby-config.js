@@ -3,7 +3,7 @@ module.exports = {
     title: `Stephen Z. Lu`,
     description: `Personal site and portfolio of Stephen Z. Lu`,
     author: `@TheMatrixMaster`,
-    siteUrl: `https://matrixmaster.me/`,
+    siteUrl: `https://2021.matrixmaster.me/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
